@@ -1,7 +1,9 @@
 const express = require('express')
 const axios = require("axios")
 const api = express()
-api.get("")
+api.get("/", (res, msg) +> {
+    
+})
 
 
 
