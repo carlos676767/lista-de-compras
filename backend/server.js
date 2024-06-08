@@ -4,7 +4,6 @@ const api = express();
 const nodemailer = require('nodemailer');
 const { MongoClient } = require("mongodb");
 
-// const cliente =  new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 api.get("/", (res, msg) => {
   try {
@@ -23,6 +22,10 @@ const httpRequest = async (callback) => {
     console.error("Error http request get from axios.");
   }
 };
+
+const url = "mongodb+srv://admin:admin1234@dados.7d94myt.mongodb.net/"
+const cliente =  new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
+
 
 httpRequest((data) => {
   console.log(data);
